@@ -1,37 +1,14 @@
-# OSCPNotes
+# OSCP Notes – Quick Snippets
 
-.
-├── enumeration/
-│   ├── network.md
-│   ├── web.md
-│   ├── ad.md
-│   └── linux-windows.md
-│
-├── exploitation/
-│   ├── web/
-│   ├── privesc-linux.md
-│   ├── privesc-windows.md
-│   └── buffer-overflow.md
-│
-├── post-exploitation/
-│   ├── persistence.md
-│   ├── lateral-movement.md
-│   └── credential-access.md
-│
-├── active-directory/
-│   ├── kerberos.md
-│   ├── silver-golden-tickets.md
-│   └── adcs.md
-│
-├── tools/
-│   ├── nmap.md
-│   ├── netexec.md
-│   ├── responder.md
-│   ├── impacket.md
-│   └── hashcat.md
-│
-├── writeups/
-│   ├── htb/
-│   └── proving-grounds/
-│
-└── README.md
+This repository contains small, copy-paste ready commands and one-liners I frequently use during OSCP-style labs and exams.
+
+> ⚠️ For educational purposes only.  
+> Do not use these techniques on systems you do not own or have explicit permission to test.
+
+---
+
+## ⚡ Quick Snippets (Copy-Paste Ready)
+
+### 🔐 Generate NTLM Hash from a Plain Password
+```bash
+python3 -c 'import hashlib; print(hashlib.new("md4", "purPLE9795!@".encode("utf-16le")).hexdigest())'
